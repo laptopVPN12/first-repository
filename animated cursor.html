@@ -1,0 +1,56 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Image Cursor Animation</title>
+    <style>
+       body {
+    cursor: none; /* Hide the default cursor */
+}   
+
+        .custom-cursor {
+            width: 65px; /* Set the width of the custom cursor */
+            height: 65px; /* Set the height of the custom cursor */
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d1a0243c-0d2e-4f82-bece-7f97b1c2e18b/dbl13kd-7d19cbaa-fa38-4f77-bfdb-667493806814.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2QxYTAyNDNjLTBkMmUtNGY4Mi1iZWNlLTdmOTdiMWMyZTE4YlwvZGJsMTNrZC03ZDE5Y2JhYS1mYTM4LTRmNzctYmZkYi02Njc0OTM4MDY4MTQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.p5xJXcTP3-903iZo4G6UyCSYDliFKRmTVktsLy8DQF4'); /* Replace with your image URL */
+            background-size: cover; /* Ensure the image covers the entire div */
+            position: absolute; /* Position it absolutely */
+            pointer-events: none; /* Prevent it from interfering with mouse events */
+            transition: transform 0.001s ease; /* Smooth transition for movement */
+        }
+
+        .custom-cursor:hover {
+            transform: scale(1.5); /* Scale up on hover */
+        }
+    </style>
+</head>
+<body style="background-color:DodgerBlue;">
+    <div class="custom-cursor"></div>
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        });
+    </script>
+    <h1 style="color:rgb(0,255,0)">Pixel Rick!</h1>
+    <p>look into javascript tracking possibly??? for issues with not getting rid of auto cursor.... changed 
+    body within CSS to instead of saying "none;" I changed it to the url link, i even deleted the auto function so it doesnt fallback as the auto pointer within the body. so far cant get rid of it. 
+    Also tried different browsers and settings within the browser of duckduckgo and none were available. also tried resizing the pixels. also tried developer options to see if it put up any issues and none were showing... even tried changing the body CSS pointer tag from none to custom url link "cursor: url('https://www.rw-designer.com/cursor-view/133032.png'), auto;"
+    even tried deleting auto after the url to delete the auto fall back feature... when i added the url link and looked at developer options it just showed it with a line through it and didnt throw up any error messages, im assuming it was showing up as basically a duplicate callout from the other url link for the custom cursor CSS tag?</p>
+<br>
+<br>
+<p>    
+    OK! were getting somewhere now... adding details to  the page gets rid of the default pointer only in the areas that html is displayed.</p>
+  <br>
+  <br>
+<br>
+  <footer>  
+    might try to add a giant blank space at the bottom with a bunch of breaks so it fills it out and wont have the default cursor anywhere</p>
+</footer>
+
+<p><b>I turned myself into a PICKLE! I'm PIXEL rick!</b></p>
+<h3><b> OK! got it! I just had to literally cover the entire fucking page with a bunch of shit in order to get rid of the auto cursor completely and keep it as PIXEL RICK! =) CLICK THE IMAGE TO GET RICK ROLLED!</h3>
+<a href="https://i.imgflip.com/7f3mwf.jpg"><img src="https://www.ixpap.com/images/2021/11/Pickle-Rick-Wallpaper-2.jpg" alt="I turned myself into a PICKLE! im PIXEL rick!" width="460" height="345"></a>
+</body>
+</html>
